@@ -4,10 +4,6 @@ import threading
 
 import mysql.connector
 
-MAIL_FOLDER = "mail_data"
-EMAIL_CONTENT_TEMPLATE = "Thank you for using this service. We hope that you will feel comfortabl........"
-
-
 class EmailServer:
     def __init__(self):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
