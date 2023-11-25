@@ -137,7 +137,7 @@ class EmailApp:
         label_id = tk.Label(popup_window, text=f"Mail ID: {email_info[0]}")
         label_id.pack(pady=5)
 
-        label_subject = tk.Label(popup_window, text=f"Subject: {email_info[1]}")
+        label_subject = tk.Label(popup_window, text=f"Tiều đề: {email_info[1]}")
         label_subject.pack(pady=5)
 
         label_content = tk.Label(popup_window, text="Nội dung:")
