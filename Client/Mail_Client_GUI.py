@@ -38,7 +38,7 @@ class EmailApp:
         self.inbox_text.config(font=myFonts)
         self.inbox_text.pack(padx=10, pady=10)
 
-        self.button_refresh_inbox = tk.Button(self.inbox_frame, text="Refresh Inbox",
+        self.button_refresh_inbox = tk.Button(self.inbox_frame, text="Tải lại",
                                               command=lambda: self.refresh_inbox(self.inbox_text, "rev"))
         self.button_refresh_inbox.pack(pady=10, side=tk.TOP)
         self.notebook.add(self.inbox_frame, text="Hộp thư đến")
@@ -50,28 +50,28 @@ class EmailApp:
         self.outbox_text.config(font=myFonts2)
         self.outbox_text.pack(padx=10, pady=10)
 
-        self.button_refresh_outbox = tk.Button(self.outbox_frame, text="Refresh Outbox",
+        self.button_refresh_outbox = tk.Button(self.outbox_frame, text="Tải lại",
                                                command=lambda: self.refresh_inbox(self.outbox_text, "sender"))
         self.button_refresh_outbox.pack(pady=10, side=tk.TOP)
         self.notebook.add(self.outbox_frame, text="Hộp thư đi")
 
         self.send_frame = ttk.Frame(self.notebook)
-        self.label_recipient_email = tk.Label(self.send_frame, text="Recipient Email:")
+        self.label_recipient_email = tk.Label(self.send_frame, text="Email người nhận:")
         self.label_recipient_email.grid(row=1, column=0, sticky=tk.W, pady=5)
         self.entry_recipient_email = tk.Entry(self.send_frame)
         self.entry_recipient_email.grid(row=1, column=1, pady=5)
 
-        self.label_subject_email = tk.Label(self.send_frame, text="Subjects:")
+        self.label_subject_email = tk.Label(self.send_frame, text="Tiêu đề:")
         self.label_subject_email.grid(row=2, column=0, sticky=tk.W, pady=5)
         self.entry_subject_email = tk.Entry(self.send_frame)
         self.entry_subject_email.grid(row=2, column=1, pady=5)
 
-        self.label_email = tk.Label(self.send_frame, text="Email Content:")
+        self.label_email = tk.Label(self.send_frame, text="Nội dung:")
         self.label_email.grid(row=4, column=0, sticky=tk.W, pady=5)
         self.text_email = tk.Text(self.send_frame, width=40, height=10)
         self.text_email.grid(row=5, column=0, columnspan=2, pady=5)
 
-        self.button_send_email = tk.Button(self.send_frame, text="Send Email", command=self.send_email)
+        self.button_send_email = tk.Button(self.send_frame, text="Gửi Email", command=self.send_email)
         self.button_send_email.grid(row=6, column=0, columnspan=2, pady=10, sticky=tk.W + tk.E)
         self.notebook.add(self.send_frame, text="Gửi mail")
 

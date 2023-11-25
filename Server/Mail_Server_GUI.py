@@ -22,10 +22,10 @@ class EmailServerGUI:
         self.refresh_list_user = tk.Button(root, text="Tải lại danh sách", command=self.show_user_list)
         self.refresh_list_user.pack(padx=10, pady=10)
 
-        self.start_button = tk.Button(root, text="Start Server", command=self.start_server)
+        self.start_button = tk.Button(root, text="Bật Server", command=self.start_server)
         self.start_button.pack(padx=10, pady=10)
 
-        self.stop_button = tk.Button(root, text="Stop Server", command=self.stop_server)
+        self.stop_button = tk.Button(root, text="Tắt Server", command=self.stop_server)
         self.stop_button.pack(padx=10, pady=10)
 
     def start_server(self):
