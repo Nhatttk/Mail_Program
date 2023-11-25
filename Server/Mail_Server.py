@@ -11,7 +11,7 @@ EMAIL_CONTENT_TEMPLATE = "Thank you for using this service. We hope that you wil
 class EmailServer:
     def __init__(self):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server_address = ('localhost', 1234)
+        self.server_address = ('192.168.1.4', 1234)
         self.server_socket.bind(self.server_address)
         self.server_socket.listen()
         print('Server is listening...')

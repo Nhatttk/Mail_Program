@@ -3,12 +3,12 @@ import socket
 from tkinter import messagebox
 import tkinter as tk
 
-from test_gui import EmailApp
+from Mail_Client_GUI import EmailApp
 
 class EmailClient:
     def __init__(self):
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.server_address = ('localhost', 1234)
+        self.server_address = ('192.168.1.4', 1234)
         self.client_socket.connect(self.server_address)
 
         self.root = tk.Tk()
